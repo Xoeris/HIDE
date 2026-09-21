@@ -114,4 +114,4 @@ HIDE builds on outstanding open-source work, including [Avalonia](https://avalon
 
 ## License
 
-HIDE is released under the [MIT License](LICENSE). Third-party components keep their own licenses.
+HIDE is proprietary software, distributed in binary form under the [HIDE Proprietary Software License](LICENSE). You may install and use it, but may not redistribute, modify or reverse engineer it. Third-party components keep their own licenses.
