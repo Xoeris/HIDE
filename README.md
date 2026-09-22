@@ -1,5 +1,3 @@
-<div align="center">
-
 # HIDE
 
 **A fast, native-feeling code editor and AI-assisted development suite, built with C# and Avalonia.**
@@ -8,13 +6,13 @@ Yours to run, yours to own.
 
 [Features](#features) · [Getting started](#getting-started) · [Platform status](#platform-status) · [Feedback](#feedback) · [License](#license)
 
-</div>
-
 ---
 
 ## Overview
 
-HIDE is a desktop IDE that pairs a custom **native text-editing engine** (C++ / Direct2D / DirectWrite) with a modern **Avalonia 12** interface. It ships with **SARAH**, an agentic AI assistant that can run against a local model, a self-hosted server or any OpenAI-compatible provider, so your code and your data stay under your control.
+**HIDE** stands for **H**orizone **I**ntegrated **D**evelopment **E**nvironment (formerly Horizone IDE).
+
+HIDE is a desktop IDE that pairs a custom **native text-editing engine** (C++ / Direct2D / DirectWrite) with a modern **Avalonia 12** interface. It ships with **Sarah**, an agentic AI assistant that can run against a local model, a self-hosted server or any OpenAI-compatible provider, so your code and your data stay under your control.
 
 HIDE began as a C# WPF application and has been carried over to Avalonia, phase by phase, with full behavioural parity.
 
@@ -22,7 +20,7 @@ HIDE began as a C# WPF application and has been carried over to Avalonia, phase 
 |---|---|
 | **UI framework** | Avalonia 12.1 (FluentTheme, code-first views) on .NET 10 |
 | **Editor engine** | `HIDEEditorCore` - native C++ / Direct2D, hosted in a `NativeControlHost` |
-| **AI** | SARAH agent: Ollama, OpenAI-compatible endpoints, local GGUF models through LLamaSharp, MCP tools |
+| **AI** | Sarah agent: Ollama, OpenAI-compatible endpoints, local GGUF models through LLamaSharp, MCP tools |
 | **Themes** | Dark, Light, Deep Blue (switched live) |
 | **Platforms** | Windows (primary); Linux and macOS builds and packages are produced by the build scripts (see [Platform status](#platform-status)) |
 
@@ -41,7 +39,7 @@ HIDE began as a C# WPF application and has been carried over to Avalonia, phase 
 - Integrated Git: status, staging, commit, and a source-control view that follows the folder of the file you are editing.
 - Integrated terminal with multiple sessions, split panes, profile selection (PowerShell, PowerShell Core, Command Prompt, Git Bash, WSL) and dockable into either sidebar or the bottom panel.
 
-### SARAH - AI assistant
+### Sarah - AI assistant
 - Agentic chat with tool use, an effort slider, chat history, attachments and slash commands.
 - **Bring your own model:** Ollama, any OpenAI-compatible endpoint (routers, hosted APIs, local servers) or local GGUF models. Model lists are fetched from each provider automatically.
 - Model Context Protocol (MCP) servers, skills and persistent memories, all configurable and resettable from Settings.
@@ -102,7 +100,7 @@ HIDE --first-run    show the first-run wizard again
 | Account session | `%APPDATA%\HIDE\auth.json` |
 | Browser cache | `%LOCALAPPDATA%\HIDE\EBWebView` |
 
-Both files are also reachable from *Settings -> General*. SARAH never sends anything anywhere you have not configured: model endpoints and MCP servers are entirely your choice.
+Both files are also reachable from *Settings -> General*. Sarah never sends anything anywhere you have not configured: model endpoints and MCP servers are entirely your choice.
 
 ## Feedback
 
