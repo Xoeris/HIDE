@@ -10,7 +10,7 @@ Yours to run, yours to own.
 
 ## Overview
 
-**Horizone IDE** (short name **HIDE**: **H**orizone **I**ntegrated **D**evelopment **E**nvironment) is a desktop IDE by **Xoeris**. It pairs a custom **native text-editing engine** (C++ / Direct2D / DirectWrite) with a modern **Avalonia 12** interface, and ships with **Sarah**, an agentic AI assistant that can run against a local model, a self-hosted server or any OpenAI-compatible provider, so your code and your data stay under your control.
+**Horizone IDE** is a desktop IDE by **Xoeris**. It pairs a custom **native text-editing engine** (C++ / Direct2D / DirectWrite) with a modern **Avalonia 12** interface, and ships with **Sarah**, an agentic AI assistant that can run against a local model, a self-hosted server or any OpenAI-compatible provider, so your code and your data stay under your control.
 
 Horizone IDE began as a C# WPF application and has been carried over to Avalonia, phase by phase, with full behavioural parity.
 
