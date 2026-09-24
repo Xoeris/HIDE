@@ -1,20 +1,18 @@
-# HIDE
+# Horizone IDE
 
 **A fast, native-feeling code editor and AI-assisted development suite, built with C# and Avalonia.**
 
 Yours to run, yours to own.
 
-[Features](#features) · [Getting started](#getting-started) · [Platform status](#platform-status) · [Feedback](#feedback) · [License](#license)
+[Features](#features) · [Getting started](#getting-started) · [Platform status](#platform-status) · [Configuration and data](#configuration-and-data) · [Feedback](#feedback) · [License](#license)
 
 ---
 
 ## Overview
 
-**HIDE** stands for **H**orizone **I**ntegrated **D**evelopment **E**nvironment (formerly Horizone IDE).
+**Horizone IDE** (short name **HIDE**: **H**orizone **I**ntegrated **D**evelopment **E**nvironment) is a desktop IDE by **Xoeris**. It pairs a custom **native text-editing engine** (C++ / Direct2D / DirectWrite) with a modern **Avalonia 12** interface, and ships with **Sarah**, an agentic AI assistant that can run against a local model, a self-hosted server or any OpenAI-compatible provider, so your code and your data stay under your control.
 
-HIDE is a desktop IDE that pairs a custom **native text-editing engine** (C++ / Direct2D / DirectWrite) with a modern **Avalonia 12** interface. It ships with **Sarah**, an agentic AI assistant that can run against a local model, a self-hosted server or any OpenAI-compatible provider, so your code and your data stay under your control.
-
-HIDE began as a C# WPF application and has been carried over to Avalonia, phase by phase, with full behavioural parity.
+Horizone IDE began as a C# WPF application and has been carried over to Avalonia, phase by phase, with full behavioural parity.
 
 | | |
 |---|---|
@@ -46,8 +44,9 @@ HIDE began as a C# WPF application and has been carried over to Avalonia, phase 
 - Awareness of every folder in a multi-root workspace.
 
 ### Built-in viewers
+- **Real-Time Preview** - an inline preview tab for web projects. It opens whatever dev server is already running on `localhost`, and its **running services** list shows every local web server with the program serving it (for example `localhost:5173 · node`). With nothing running, it opens an empty page with an address bar.
 - **Aurevia** - a tabbed web browser with incognito tabs, tab groups (named and colour-coded) and per-tab mute.
-- **Medialux** - image and video viewing, with video trim and export (needs an `ffmpeg` executable next to HIDE).
+- **Medialux** - image and video viewing, with video trim and export (needs an `ffmpeg` executable next to Horizone IDE).
 - PDF, DOCX and archive viewers open right in the editor area.
 
 ### Dualarity
@@ -55,7 +54,7 @@ A document-similarity analyser: compare a document against reference files or we
 
 ### Customisation
 - **Themes:** Dark, Light and Deep Blue, applied live from *Settings -> General -> Theme*.
-- **Keymaps:** the default Xoeris profile or a VS Code compatibility profile, with per-command overrides and two-step chord recording.
+- **Keymaps:** the default Xoeris profile, with a shortcut for every command out of the box, or a VS Code compatibility profile. Any shortcut can be re-recorded in *Settings -> Keyboard Shortcuts*, including two-step chords.
 - **Layout:** every panel can be docked left, right or bottom; sidebars and panels toggle from the title bar.
 - **Settings:** a searchable settings UI, plus everything stored in a plain `settings.json` you can edit by hand.
 
@@ -63,25 +62,30 @@ A document-similarity analyser: compare a document against reference files or we
 
 ### Install
 
-Download the installer for your platform from the [Releases](https://github.com/Xoeris/HIDE/releases) page and run it. The installer offers a per-user install (no elevation) or an all-users install, and can create desktop and start-menu shortcuts.
+Download the installer for your platform from the [Releases](https://github.com/Xoeris/Horizone-IDE/releases) page and run it. The installer offers a per-user install (no elevation) or an all-users install, and can create desktop and Start menu shortcuts.
 
 | Platform | Artifact |
 |---|---|
-| Windows | `HIDE-Installer.exe` |
-| Linux | `HIDE-Installer-linux-<arch>.tar.gz`, or the `.deb` / `.tar.gz` / AppImage packages |
-| macOS | `HIDE-Installer-osx-<arch>.tar.gz`, or the `.app` zip / `.dmg` |
+| Windows | `Horizone IDE-Installer-win-x64.exe`, `Horizone IDE-Installer-win-arm64.exe` |
+| Linux | `Horizone IDE-Installer-linux-<arch>`, or the `horizone-ide` `.deb`, `.tar.gz` and AppImage packages |
+| macOS | `Horizone IDE-Installer-osx-<arch>`, or the `Horizone IDE.app` zip / `.dmg` |
+
+| Install type | Location (Windows) |
+|---|---|
+| Just for me | `%LOCALAPPDATA%\Horizone IDE` |
+| All users | `C:\Program Files\Horizone IDE` |
 
 > **macOS:** builds are not notarized, so Gatekeeper will warn on first launch (right-click -> Open).
 
 ### First run
 
-On first launch a short wizard lets you import editor settings from VS Code, then HIDE opens. Use **File -> Open Folder** to start working. Press **Ctrl+Shift+P** for the command palette and **Ctrl+,** for Settings.
+On first launch a short wizard lets you import editor settings from VS Code, then Horizone IDE opens. Use **File -> Open Folder** to start working. Press **Ctrl+Shift+P** for the command palette and **Ctrl+,** for Settings.
 
 ### Command line
 
 ```text
-HIDE [path ...]     open files, folders or a .code-workspace file
-HIDE --first-run    show the first-run wizard again
+"Horizone IDE" [path ...]     open files, folders or a .code-workspace file
+"Horizone IDE" --first-run    show the first-run wizard again
 ```
 
 ## Platform status
@@ -95,21 +99,26 @@ HIDE --first-run    show the first-run wizard again
 
 | What | Where (Windows) |
 |---|---|
-| Settings | `%APPDATA%\HIDE\settings.json` |
-| Custom keybindings | `%APPDATA%\HIDE\keybindings.json` |
-| Account session | `%APPDATA%\HIDE\auth.json` |
-| Browser cache | `%LOCALAPPDATA%\HIDE\EBWebView` |
+| Settings | `%APPDATA%\Horizone IDE\settings.json` |
+| Custom keybindings | `%APPDATA%\Horizone IDE\keybindings.json` |
+| Account session | `%APPDATA%\Horizone IDE\auth.json` |
+| Chat history, memories, skills, rules | `%APPDATA%\Horizone IDE\` |
+| Browser cache | `%LOCALAPPDATA%\Horizone IDE\EBWebView` |
 
-Both files are also reachable from *Settings -> General*. Sarah never sends anything anywhere you have not configured: model endpoints and MCP servers are entirely your choice.
+Settings and keybindings are also reachable from *Settings -> General*. Upgrading from a build that used `%APPDATA%\HorizoneIDE` or `%APPDATA%\HIDE` moves that folder across automatically on first launch.
+
+Sarah never sends anything anywhere you have not configured: model endpoints and MCP servers are entirely your choice.
 
 ## Feedback
 
-HIDE is currently closed-source; this repository hosts releases, the license and documentation. Bug reports and feature requests are welcome in [Issues](https://github.com/Xoeris/HIDE/issues).
+Horizone IDE is currently closed-source; this repository hosts releases, the license and documentation. Bug reports and feature requests are welcome in [Issues](https://github.com/Xoeris/Horizone-IDE/issues).
 
 ## Acknowledgements
 
-HIDE builds on outstanding open-source work, including [Avalonia](https://avaloniaui.net/), [LLamaSharp](https://github.com/SciSharp/LLamaSharp), [LibVLCSharp](https://github.com/videolan/libvlcsharp), [PdfPig](https://github.com/UglyToad/PdfPig), [Docnet.Core](https://github.com/GowenGit/docnet), [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet), the [Inter](https://rsms.me/inter/) typeface and the fonts shipped in `resources/fonts`.
+Horizone IDE builds on outstanding open-source work, including [Avalonia](https://avaloniaui.net/), [LLamaSharp](https://github.com/SciSharp/LLamaSharp), [LibVLCSharp](https://github.com/videolan/libvlcsharp), [PdfPig](https://github.com/UglyToad/PdfPig), [Docnet.Core](https://github.com/GowenGit/docnet), [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet), the [Inter](https://rsms.me/inter/) typeface and the fonts shipped in `resources/fonts`.
 
 ## License
 
-HIDE is proprietary software, distributed in binary form under the [HIDE Proprietary Software License](LICENSE). You may install and use it, but may not redistribute, modify or reverse engineer it. Third-party components keep their own licenses.
+Horizone IDE is proprietary software by Xoeris, distributed in binary form under the [Horizone IDE Proprietary Software License](LICENSE). You may install and use it, but may not redistribute, modify or reverse engineer it. Third-party components keep their own licenses.
+
+© 2018 - 2026 Xoeris. All rights reserved.
