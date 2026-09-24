@@ -45,9 +45,17 @@ Agreement. If You do not agree, do not install or use the Software.
 5. THIRD-PARTY COMPONENTS
    The Software includes third-party components (for example Avalonia,
    LLamaSharp, LibVLCSharp, PdfPig, Docnet.Core, CommunityToolkit.Mvvm, the
-   Inter typeface and the fonts distributed with the Software). Each is
+   Inter typeface and the fonts distributed with the Software). It also
+   includes, in its LanguageServers folder, unmodified language servers and
+   runtimes (for example Node.js, clangd, Pyright and ShellCheck) that the
+   Software runs as separate programs. Each third-party component is
    licensed under its own terms, which apply to that component and are not
-   modified by this Agreement.
+   modified by this Agreement. The licences and notices of the language
+   servers and runtimes are reproduced in the file
+   LanguageServers/THIRD-PARTY-NOTICES.txt distributed with the Software.
+   Nothing in this Agreement limits any right You have under the licence of
+   a third-party component, including any right to copy, modify or
+   redistribute that component or to obtain its source code.
 
 6. UPDATES AND FEEDBACK
    Licensor may provide updates, which form part of the Software and are
