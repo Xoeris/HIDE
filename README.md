@@ -113,12 +113,16 @@ Sarah never sends anything anywhere you have not configured: model endpoints and
 
 Horizone IDE is currently closed-source; this repository hosts releases, the license and documentation. Bug reports and feature requests are welcome in [Issues](https://github.com/Xoeris/Horizone-IDE/issues).
 
+## Documents
+
+[Help](HELP.md) · [Terms of Service](TERMS.md) · [Privacy Policy](PRIVACY.md) · [Open Source Software Statement](OPEN-SOURCE.md) · [Contact](CONTACT.md) · [License](LICENSE.md)
+
 ## Acknowledgements
 
 Horizone IDE builds on outstanding open-source work, including [Avalonia](https://avaloniaui.net/), [LLamaSharp](https://github.com/SciSharp/LLamaSharp), [LibVLCSharp](https://github.com/videolan/libvlcsharp), [PdfPig](https://github.com/UglyToad/PdfPig), [Docnet.Core](https://github.com/GowenGit/docnet), [CommunityToolkit.Mvvm](https://github.com/CommunityToolkit/dotnet), the [Inter](https://rsms.me/inter/) typeface and the fonts shipped in `resources/fonts`.
 
 ## License
 
-Horizone IDE is proprietary software by Xoeris, distributed in binary form under the [Horizone IDE Proprietary Software License](LICENSE). You may install and use it, but may not redistribute, modify or reverse engineer it. Third-party components keep their own licenses.
+Horizone IDE is proprietary software by Xoeris, distributed in binary form under the [Horizone IDE Proprietary Software License](LICENSE.md). You may install and use it, but may not redistribute, modify or reverse engineer it. Third-party components keep their own licenses.
 
 © 2018 - 2026 Xoeris. All rights reserved.
